@@ -48,3 +48,6 @@ jobs:
           context: .
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/cicdpractice:latest
+
+      - name: Trigger Render deploy
+        run: curl ${{ secrets.RENDER_DEPLOY_HOOK }}
