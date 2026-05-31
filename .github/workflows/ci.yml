@@ -35,3 +35,6 @@ jobs:
         with:
           name: cicdpractice-app
           path: ./publish
+
+      - name: Build Docker image
+        run: docker build -t cicdpractice:latest .
